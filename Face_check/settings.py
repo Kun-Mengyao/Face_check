@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'login.apps.LoginConfig'
 ]
 
 MIDDLEWARE = [
@@ -72,6 +74,7 @@ WSGI_APPLICATION = 'Face_check.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+# 连接数据库
 
 DATABASES = {
     'default': {
