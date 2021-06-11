@@ -14,4 +14,4 @@ class User(models.Model):
     password = models.CharField(max_length=200)
 
     # 人脸照片
-    photo = models.ImageField()
+    photo = models.ImageField(upload_to='photos')
