@@ -19,11 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4da9f4f3-1d43-43ec-80d7-389f6f9d4c75" name="Default Changelist" comment="basic register">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Face_check/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Face_check/settings.py" afterDir="false" />
+    <list default="true" id="4da9f4f3-1d43-43ec-80d7-389f6f9d4c75" name="Default Changelist" comment="register success">
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +99,7 @@
       <workItem from="1623223764545" duration="5636000" />
       <workItem from="1623299140570" duration="9547000" />
       <workItem from="1623384246115" duration="10217000" />
-      <workItem from="1624465291820" duration="4664000" />
+      <workItem from="1624465291820" duration="4974000" />
     </task>
     <task id="LOCAL-00001" summary="project start">
       <created>1623223833866</created>
@@ -146,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623321441630</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="register success">
+      <created>1624473197767</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1624473197767</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,28 +172,33 @@
     <MESSAGE value="project start" />
     <MESSAGE value="db connected" />
     <MESSAGE value="basic register" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic register" />
+    <MESSAGE value="register success" />
+    <option name="LAST_COMMIT_MESSAGE" value="register success" />
   </component>
   <component name="WindowStateProjectService">
     <state x="147" y="65" key="DiffContextDialog" timestamp="1623395898184">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="147" y="65" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1623395898184" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1623399906858">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1624473242412">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1624473242412" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623399906858" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1623399906858">
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1624473242412">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1624473242412" />
     <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1623399906858" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1623399906858">
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1624473242412">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1624473242412" />
     <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1623399906858" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1623399906858">
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1624473242412">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1624473242412" />
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1623399906858" />
     <state width="212" height="477" key="HiddenNamespacesPopup" timestamp="1623299352920">
       <screen x="0" y="0" width="1536" height="824" />
@@ -203,13 +212,15 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="403" y="172" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1623395838962" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1623396309782">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1624473202474">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1624473202474" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1623396309782" />
-    <state x="573" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623395823600">
+    <state x="573" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1624473235663">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="573" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1624473235663" />
     <state x="573" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1623395823600" />
     <state x="468" y="144" width="600" height="536" key="find.popup" timestamp="1623392864802">
       <screen x="0" y="0" width="1536" height="824" />
