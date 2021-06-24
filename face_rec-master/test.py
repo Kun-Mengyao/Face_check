@@ -3,7 +3,8 @@ import cv2 as cv
 from eye_status import *
 import random
 import face_recognition
-
+import os
+os.environ["TF_KERAS"] = '1'
 def detectAndDisplay(frame,face_detector,eyes_detector,model,Capture,frames,left_eye_dectector,right_eye_dectector):
     frame_gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
     frame_gray = cv.equalizeHist(frame_gray)
