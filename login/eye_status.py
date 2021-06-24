@@ -59,12 +59,12 @@ def save_model(model):
 
 
 def load_model():
-    json_file = open('model.json', 'r')
+    json_file = open('D:\Desk\Face_check\\face_rec-master\model.json', 'r')
     loaded_model_json = json_file.read()
     json_file.close()
     loaded_model = model_from_json(loaded_model_json)
     # load weights into new model
-    loaded_model.load_weights("model.h5")
+    loaded_model.load_weights("D:\Desk\Face_check\\face_rec-master\model.h5")
     loaded_model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
     return loaded_model
 

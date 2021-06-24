@@ -7,6 +7,8 @@ from login.models import User
 from django.contrib.auth import authenticate, login
 import cv2
 import os
+from .faceRec import *
+from django import forms
 
 '''
 {
@@ -20,19 +22,26 @@ import os
 
 # 注册
 def register(request):
-    request.params = json.loads(request.body)
-    info = request.params
-    if User.objects.filter(phonenumber=info['phonenumber']).exists():
+    # img = request.FILES
+    # info = request.cleaned_data
+    # print(request)
+    name = request.POST.get('name')
+    phonenumber = request.POST.get('phonenumber')
+    password = request.POST.get('password')
+    photo = request.FILES.get('file')
+    print(name)
+    print(photo)
+    if User.objects.filter(phonenumber=phonenumber).exists():
         response = HttpResponse()
         response.status_code = 400
         return response
     # 从请求消息中 获取要添加客户的信息
     # 并且插入到数据库中
     # 返回值 就是对应插入记录的对象
-    record = User.objects.create(name=info['name'],
-                                 phonenumber=info['phonenumber'],
-                                 password=info['password'],
-                                 photo=info['photo'])
+    record = User.objects.create(name=name,
+                                 phonenumber=phonenumber,
+                                 password=password,
+                                 photo=photo)
     return JsonResponse({'ret': 0, 'phonenumber': record.phonenumber})
 
 
@@ -43,6 +52,7 @@ def signIn(request):
     info = request.params
     print(info)
     if User.objects.filter(phonenumber=info['phonenumber'], password=info['password']).exists():
+        request.session['phonenumber'] = info['phonenumber']
         request.session['phonenumber'] = info['phonenumber']
         return JsonResponse({'ret': 0, 'phonenumber': info['phonenumber']})
     # 使用 Django auth 库里面的 方法校验用户名、密码
@@ -82,7 +92,11 @@ def faceCheck(request):
                 for chunk in myFile.chunks():
                     destination.write(chunk)
                 destination.close()
-        return HttpResponse('ok')
+
+                path = 'photos\\xzh.jpg'
+                if run(myFile.name, path):
+                    return HttpResponse('ok')
+    return HttpResponse('bad')
 
 
 def personalInfo(request):

@@ -112,12 +112,12 @@ def initial():
     model = load_model()
     return (face_detector,eyes_detector,model,left_eye_dectector,right_eye_dectector)
 
-def run():
+def run(video_path,img_path):
     face_detector,eyes_detector,model,left_eye_detector,right_eye_detector = initial()
     result = False
     frames = []
     #-- 2. Read the video stream
-    cap = cv.VideoCapture('open7.avi')
+    cap = cv.VideoCapture(video_path)
     if not cap.isOpened:
         print('--(!)Error opening video capture')
         exit(0)
@@ -128,17 +128,18 @@ def run():
             break
         result = detectAndDisplay(frame,face_detector,eyes_detector,model,cap,frames,left_eye_detector,right_eye_detector)
         if result:
+            ret = face_rec(frames,img_path)
             break
         #
         # if cv.waitKey(10) == 27:
         #     break
+    print(ret)
+    return ret
 
-    return result,frames
 
-
-def face_rec(frames):
+def face_rec(frames,img_path):
     result = False
-    img_test = 'D:\\Wwei\\Code\\python\\face_rec-master\\data\\ww\\ww1.jpg'
+    img_test = img_path
     imgTest = face_recognition.load_image_file(img_test)
     imgTest = cv.cvtColor(imgTest,cv.COLOR_BGR2RGB)
     encoding_test = face_recognition.face_encodings(imgTest)[0]
@@ -154,7 +155,7 @@ def face_rec(frames):
 
 def test(frames):
     count = 0
-    img_test = 'D:\\Wwei\\Code\\python\\face_rec-master\\data\\ww\\ww1.jpg'
+    img_test = 'D:\Desk\Face_check\\face_rec-master\data\ww\ww1.jpg'
     imgTest = face_recognition.load_image_file(img_test)
     imgTest = cv.cvtColor(imgTest, cv.COLOR_BGR2RGB)
     encoding_test = face_recognition.face_encodings(imgTest)[0]
@@ -177,12 +178,12 @@ def test(frames):
 
 
 
-
-res,frames = run()
-if(res):
-    print(test(frames))
-else:
-    print("验证失败")
+#
+# res,frames = run()
+# if(res):
+#     print(test(frames))
+# else:
+#     print("验证失败")
 
 
 
