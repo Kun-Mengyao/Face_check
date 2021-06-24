@@ -4,8 +4,9 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 import json
 from login.models import User
+from django.contrib.auth import authenticate, login
 import cv2
-
+import os
 
 '''
 {
@@ -15,13 +16,15 @@ import cv2
     "photo":"jpg.jpg"
 }
 '''
+
+
 # 注册
 def register(request):
     request.params = json.loads(request.body)
     info = request.params
     if User.objects.filter(phonenumber=info['phonenumber']).exists():
         response = HttpResponse()
-        response.status_code=400
+        response.status_code = 400
         return response
     # 从请求消息中 获取要添加客户的信息
     # 并且插入到数据库中
@@ -30,10 +33,56 @@ def register(request):
                                  phonenumber=info['phonenumber'],
                                  password=info['password'],
                                  photo=info['photo'])
+    return JsonResponse({'ret': 0, 'phonenumber': record.phonenumber})
+
+
+# 登录
+def signIn(request):
+    # 从 HTTP POST 请求中获取用户名、密码参数
+    request.params = json.loads(request.body)
+    info = request.params
+    print(info)
+    if User.objects.filter(phonenumber=info['phonenumber'], password=info['password']).exists():
+        request.session['phonenumber'] = info['phonenumber']
+        return JsonResponse({'ret': 0, 'phonenumber': info['phonenumber']})
+    # 使用 Django auth 库里面的 方法校验用户名、密码
+    # user = authenticate(phonenumber=info['phonenumber'], password=info['password'])
+    #
+    # # 如果能找到用户，并且密码正确
+    # print(user)
+    # if user is not None:
+    #     print(11)
+    #     if user.is_active:
+    #         if user.is_superuser:
+    #             login(request, user)
+    #             # 在session中存入用户类型
+    #             request.session['usertype'] = 'mgr'
+    #
+    #             return JsonResponse({'ret': 0})
+    #         else:
+    #             return JsonResponse({'ret': 1, 'msg': '请使用管理员账户登录'})
+    #     else:
+    #         return JsonResponse({'ret': 0, 'msg': '用户已经被禁用'})
+
+    # 否则就是用户名、密码有误
     response = HttpResponse()
-    response.status_code = 200
+    response.status_code = 400
     return response
-    # return JsonResponse({'ret': 0, 'phonenumber': record.phonenumber})
+
+
+def faceCheck(request):
+    if request.method == 'POST':
+        if request.FILES:
+            myFile = request.FILES.get('userfile')
+            print(myFile)
+            if myFile:
+                dir = os.path.abspath('.')
+                destination = open(os.path.join(dir, myFile.name),
+                                   'wb+')
+                for chunk in myFile.chunks():
+                    destination.write(chunk)
+                destination.close()
+        return HttpResponse('ok')
 
 
 def personalInfo(request):
