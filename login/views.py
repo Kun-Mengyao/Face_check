@@ -94,7 +94,9 @@ def faceCheck(request):
                 destination.close()
 
                 path = 'photos\\xzh.jpg'
-                if run(myFile.name, path):
+                suc = run(myFile.name, path)
+                print(suc)
+                if suc:
                     return HttpResponse('ok')
     return HttpResponse('bad')
 

@@ -128,7 +128,7 @@ def run(video_path,img_path):
             break
         result = detectAndDisplay(frame,face_detector,eyes_detector,model,cap,frames,left_eye_detector,right_eye_detector)
         if result:
-            ret = face_rec(frames,img_path)
+            ret = test(frames,img_path)
             break
         #
         # if cv.waitKey(10) == 27:

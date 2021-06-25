@@ -67,14 +67,15 @@ def detectAndDisplay(frame, face_detector, eyes_detector, model, Capture, frames
                     if frame is None:
                         break
                     frames.append(frame)
-                    # l_eyes = left_eye_dectector.detectMultiScale(frame, minNeighbors=5)
-                    # r_eyes = right_eye_dectector.detectMultiScale(frame, minNeighbors=5)
+                    l_eyes = left_eye_dectector.detectMultiScale(frame, minNeighbors=5)
+                    r_eyes = right_eye_dectector.detectMultiScale(frame, minNeighbors=5)
                     if len(left_pos) != 0 and len(right_pos) != 0:
                         left_pred = predict(
                             frame[left_pos[1]:left_pos[1] + left_pos[3], left_pos[0]:left_pos[0] + left_pos[2]], model)
                         right_pred = predict(
                             frame[right_pos[1]:right_pos[1] + right_pos[3], right_pos[0]:right_pos[0] + right_pos[2]],
                             model)
+                        print(left_pred,right_pred)
                         # cv.imshow('right',
                         #          frame[right_pos[1]:right_pos[1]+right_pos[3],right_pos[0]:right_pos[0]+right_pos[2]])
                         if left_pred == "closed" or right_pred == "closed":
@@ -129,7 +130,7 @@ def run(video_path, img_path):
     if not cap.isOpened:
         print('--(!)Error opening video capture')
         exit(0)
-    ret = False
+    ret = [False]
     while cap.isOpened():
         ret, frame = cap.read()
         if frame is None:
@@ -138,34 +139,21 @@ def run(video_path, img_path):
         result = detectAndDisplay(frame, face_detector, eyes_detector, model, cap, frames, left_eye_detector,
                                   right_eye_detector)
         if result:
-            ret = face_rec(frames, img_path)
+            ret = test(frames, img_path)
             break
-        #
-        # if cv.waitKey(10) == 27:
-        #     break
 
+        if cv.waitKey(10) == 27:
+            break
+    if type(ret)==list:
+        ret = ret[0]
+    print(ret)
     return ret
 
 
-def face_rec(frames, img_path):
-    result = False
-    img_test = img_path
-    imgTest = face_recognition.load_image_file(img_test)
-    imgTest = cv.cvtColor(imgTest, cv.COLOR_BGR2RGB)
-    encoding_test = face_recognition.face_encodings(imgTest)[0]
-    idx = random.randint(0, len(frames) - 1)
-    frame = frames[idx]
-    encoding_frame = face_recognition.face_encodings(frame)
-    if len(encoding_frame) > 0:
-        encoding_frame = encoding_frame[0]
-        result = face_recognition.compare_faces([encoding_test], encoding_frame)
 
-    return result
-
-
-def test(frames):
+def test(frames,img_path):
     count = 0
-    img_test = 'D:\Desk\Face_check\\face_rec-master\data\ww\ww1.jpg'
+    img_test = img_path
     imgTest = face_recognition.load_image_file(img_test)
     imgTest = cv.cvtColor(imgTest, cv.COLOR_BGR2RGB)
     encoding_test = face_recognition.face_encodings(imgTest)[0]
