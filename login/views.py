@@ -92,8 +92,12 @@ def faceCheck(request):
                 for chunk in myFile.chunks():
                     destination.write(chunk)
                 destination.close()
-
-                path = 'photos\\xzh.jpg'
+                ph = request.POST.get('phonenumber')
+                print(ph)
+                path = User.objects.filter(phonenumber=ph).values('photo')
+                path = path[0].get('photo')
+                print(path)
+                # path = 'photos\\xzh.jpg'
                 suc = run(myFile.name, path)
                 print(suc)
                 if suc:

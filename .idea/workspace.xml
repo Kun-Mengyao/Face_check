@@ -20,30 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4da9f4f3-1d43-43ec-80d7-389f6f9d4c75" name="Default Changelist" comment="差三者一起验证">
-      <change afterPath="$PROJECT_DIR$/face_rec-master/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face_rec-master/.idea/face_rec-master.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face_rec-master/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face_rec-master/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face_rec-master/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face_rec-master/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face_rec-master/11.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face_rec-master/blink.avi" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face_rec-master/cacaeb96b63cf2b21bfc839bcf47eea3.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face_rec-master/data/hty/hty1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face_rec-master/data/jzy/jzy1.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/face_rec-master/data/ww/test1.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/face_rec-master/data/ww/test2.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/face_rec-master/data/ww/ww1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face_rec-master/lbpcascade_frontalface.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face_rec-master/model.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face_rec-master/open7.avi" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/face_rec-master/ww1.mp4" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/face_rec-master/ww2.mp4" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/photos/xzh.jpg" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/photos/人像.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/face_rec-master/faceRec.py" beforeDir="false" afterPath="$PROJECT_DIR$/face_rec-master/faceRec.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/faceRec.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/faceRec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -211,7 +196,7 @@
       <workItem from="1624465291820" duration="5201000" />
       <workItem from="1624503369336" duration="19571000" />
       <workItem from="1624553754026" duration="11826000" />
-      <workItem from="1624591066312" duration="7003000" />
+      <workItem from="1624591066312" duration="11564000" />
     </task>
     <task id="LOCAL-00001" summary="project start">
       <created>1623223833866</created>
@@ -297,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624566918319</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="差三者一起验证">
+      <created>1624600249139</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1624600249139</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,29 +326,29 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="147" y="65" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1623395898184" />
-    <state width="1493" height="238" key="GridCell.Tab.0.bottom" timestamp="1624598474948">
+    <state width="1493" height="238" key="GridCell.Tab.0.bottom" timestamp="1624603529136">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1624473579500" />
-    <state width="1493" height="238" key="GridCell.Tab.0.bottom/0.0.1536.824/-3840.0.1920.1040@0.0.1536.824" timestamp="1624598474948" />
+    <state width="1493" height="238" key="GridCell.Tab.0.bottom/0.0.1536.824/-3840.0.1920.1040@0.0.1536.824" timestamp="1624603529136" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1623399906858" />
-    <state width="1493" height="238" key="GridCell.Tab.0.center" timestamp="1624598474948">
+    <state width="1493" height="238" key="GridCell.Tab.0.center" timestamp="1624603529135">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1624473579499" />
-    <state width="1493" height="238" key="GridCell.Tab.0.center/0.0.1536.824/-3840.0.1920.1040@0.0.1536.824" timestamp="1624598474948" />
+    <state width="1493" height="238" key="GridCell.Tab.0.center/0.0.1536.824/-3840.0.1920.1040@0.0.1536.824" timestamp="1624603529135" />
     <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1623399906858" />
-    <state width="1493" height="238" key="GridCell.Tab.0.left" timestamp="1624598474948">
+    <state width="1493" height="238" key="GridCell.Tab.0.left" timestamp="1624603529135">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1624473579499" />
-    <state width="1493" height="238" key="GridCell.Tab.0.left/0.0.1536.824/-3840.0.1920.1040@0.0.1536.824" timestamp="1624598474948" />
+    <state width="1493" height="238" key="GridCell.Tab.0.left/0.0.1536.824/-3840.0.1920.1040@0.0.1536.824" timestamp="1624603529135" />
     <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1623399906858" />
-    <state width="1493" height="238" key="GridCell.Tab.0.right" timestamp="1624598474948">
+    <state width="1493" height="238" key="GridCell.Tab.0.right" timestamp="1624603529135">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1624473579499" />
-    <state width="1493" height="238" key="GridCell.Tab.0.right/0.0.1536.824/-3840.0.1920.1040@0.0.1536.824" timestamp="1624598474948" />
+    <state width="1493" height="238" key="GridCell.Tab.0.right/0.0.1536.824/-3840.0.1920.1040@0.0.1536.824" timestamp="1624603529135" />
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1623399906858" />
     <state width="212" height="477" key="HiddenNamespacesPopup" timestamp="1623299352920">
       <screen x="0" y="0" width="1536" height="824" />
@@ -374,11 +366,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="56" key="SettingsEditor/0.0.1536.824/-3840.0.1920.1040@0.0.1536.824" timestamp="1624553465520" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1624591110610">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1624600260871">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1920.1040@0.0.1536.824" timestamp="1624473542209" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.0.1920.1040@0.0.1536.824" timestamp="1624591110610" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/-3840.0.1920.1040@0.0.1536.824" timestamp="1624600260871" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1623396309782" />
     <state x="573" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1624473450114">
       <screen x="0" y="0" width="1536" height="824" />
